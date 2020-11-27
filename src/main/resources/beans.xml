@@ -1,0 +1,18 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="SonyHead" class="sut.ist011m.smirnov.SonyHead" />
+    <bean id="AmazonBody" class="sut.ist011m.smirnov.AmazonBody" />
+    <bean id="MercedesLegs" class="sut.ist011m.smirnov.MercedesLegs" />
+
+    <bean id="LgHead" class="sut.ist011m.smirnov.LgHead"/>
+
+    <bean id="robot" class="sut.ist011m.smirnov.Robot">
+        <constructor-arg ref="LgHead"/>
+        <constructor-arg ref="AmazonBody"/>
+        <constructor-arg ref="MercedesLegs"/>
+    </bean>
+
+</beans>
